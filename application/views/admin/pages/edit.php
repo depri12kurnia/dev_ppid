@@ -82,9 +82,13 @@ echo form_open_multipart(base_url('admin/pages/edit/' . $pages->id_pages));
                 <option value="Profil" <?php if ($pages->jenis_pages == "Profil") {
                                             echo "selected";
                                         } ?>>Profil</option>
-                <option value="Informasi" <?php if ($pages->jenis_pages == "Informasi") {
-                                                echo "selected";
-                                            } ?>>Informasi
+                <option value="Informasi Publik" <?php if ($pages->jenis_pages == "Informasi Publik") {
+                                                        echo "selected";
+                                                    } ?>>Informasi Publik
+                </option>
+                <option value="Layanan" <?php if ($pages->jenis_pages == "Layanan") {
+                                            echo "selected";
+                                        } ?>>Layanan
                 </option>
             </select>
 

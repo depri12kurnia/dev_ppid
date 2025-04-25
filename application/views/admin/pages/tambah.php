@@ -77,7 +77,8 @@ echo form_open_multipart(base_url('admin/pages/tambah'));
             <select name="jenis_pages" class="form-control">
                 <option value="">- Pilih Jenis Pages -</option>
                 <option value="Profil">Profil</option>
-                <option value="Informasi">Informasi</option>
+                <option value="Informasi Publik">Informasi Publik</option>
+                <option value="Layanan">Layanan</option>
             </select>
 
         </div>

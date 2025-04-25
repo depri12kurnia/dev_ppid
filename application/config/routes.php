@@ -69,7 +69,6 @@ $route['sitemap/custom\.xml'] = 'sitemap/custom';
 $route['kategori/(:any)'] = 'berita/kategori/$1';
 $route['kategori/(:any)/(:num)'] = 'berita/kategori/$1/$s2';
 
-// Route Jajaran Manajemen
-$route['jajaran-manajemen'] = 'staff';
-$route['jajaran-manajemen/(:any)'] = 'staff/detail/$1';
-$route['jajaran-manajemen/(:any)/(:num)'] = 'staff/detail/$1/$s2';
+// route untuk halaman pages
+$route['pages/(:any)'] = 'pages/$1';
+$route['pages/(:any)/(:num)'] = 'pages/$1/$s2';

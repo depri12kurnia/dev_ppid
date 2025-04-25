@@ -18,70 +18,70 @@ class Pages extends CI_Controller
 	}
 
 	// Main page
-	public function index()
-	{
-		$site 		= $this->konfigurasi_model->listing();
-		$populer	= $this->pages_model->populer();
-		$pengumuman	= $this->pages_model->pengumuman();
-		$list_side	= $this->kategori_model->list_side();
+	// public function index()
+	// {
+	// 	$site 		= $this->konfigurasi_model->listing();
+	// 	$populer	= $this->pages_model->populer();
+	// 	$pengumuman	= $this->pages_model->pengumuman();
+	// 	$list_side	= $this->kategori_model->list_side();
 
-		// pages dan paginasi
-		$this->load->library('pagination');
-		$config['base_url'] 		= base_url() . 'pages/index/';
-		$config['total_rows'] 		= $this->db->count_all('pages');
-		$config['num_links'] 		= 5;
-		$config['uri_segment'] 		= 3;
+	// 	// pages dan paginasi
+	// 	$this->load->library('pagination');
+	// 	$config['base_url'] 		= base_url() . 'pages/index/';
+	// 	$config['total_rows'] 		= $this->db->count_all('pages');
+	// 	$config['num_links'] 		= 5;
+	// 	$config['uri_segment'] 		= 3;
 
-		$config['per_page'] 		= 2;
-		$config['first_url'] 		= base_url() . 'pages/';
+	// 	$config['per_page'] 		= 2;
+	// 	$config['first_url'] 		= base_url() . 'pages/';
 
-		$config['full_tag_open'] 	= '<ul class="pagination">';
-		$config['full_tag_close'] 	= '</ul>';
+	// 	$config['full_tag_open'] 	= '<ul class="pagination">';
+	// 	$config['full_tag_close'] 	= '</ul>';
 
-		$config['first_link'] 		= '&laquo;';
-		$config['first_tag_open'] 	= '<li class="prev page">';
-		$config['first_tag_close'] 	= '</li>';
+	// 	$config['first_link'] 		= '&laquo;';
+	// 	$config['first_tag_open'] 	= '<li class="prev page">';
+	// 	$config['first_tag_close'] 	= '</li>';
 
-		$config['last_link'] 		= '&raquo;';
-		$config['last_tag_open'] 	= '<li class="next page">';
-		$config['last_tag_close'] 	= '</li>';
+	// 	$config['last_link'] 		= '&raquo;';
+	// 	$config['last_tag_open'] 	= '<li class="next page">';
+	// 	$config['last_tag_close'] 	= '</li>';
 
-		$config['next_link'] 		= '&rarr;';
-		$config['next_tag_open'] 	= '<li class="next page">';
-		$config['next_tag_close'] 	= '</li>';
+	// 	$config['next_link'] 		= '&rarr;';
+	// 	$config['next_tag_open'] 	= '<li class="next page">';
+	// 	$config['next_tag_close'] 	= '</li>';
 
-		$config['prev_link'] 		= '&larr;';
-		$config['prev_tag_open'] 	= '<li class="prev page">';
-		$config['prev_tag_close'] 	= '</li>';
+	// 	$config['prev_link'] 		= '&larr;';
+	// 	$config['prev_tag_open'] 	= '<li class="prev page">';
+	// 	$config['prev_tag_close'] 	= '</li>';
 
-		$config['cur_tag_open'] 	= '<li class="active"><a href="">';
-		$config['cur_tag_close'] 	= '</a></li>';
+	// 	$config['cur_tag_open'] 	= '<li class="active"><a href="">';
+	// 	$config['cur_tag_close'] 	= '</a></li>';
 
-		$config['num_tag_open'] 	= '<li class="page">';
-		$config['num_tag_close'] 	= '</li>';
+	// 	$config['num_tag_open'] 	= '<li class="page">';
+	// 	$config['num_tag_close'] 	= '</li>';
 
-		$page 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+	// 	$page 		= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-		$this->pagination->initialize($config);
+	// 	$this->pagination->initialize($config);
 
-		$pages 	= $this->pages_model->pages($config['per_page'], $page);
+	// 	$pages 	= $this->pages_model->pages($config['per_page'], $page);
 
-		$pagination = $this->pagination->create_links();
+	// 	$pagination = $this->pagination->create_links();
 
-		$data = array(
-			'title'			=> 'pages - ' . $site->namaweb,
-			'deskripsi'		=> 'pages - ' . $site->namaweb,
-			'keywords'		=> 'pages - ' . $site->namaweb,
-			'pagination' 	=> $pagination,
-			'pages'			=> $pages,
-			'site'			=> $site,
-			'populer'		=> $populer,
-			'pengumuman' 	=> $pengumuman,
-			'list_side'		=> $list_side,
-			'isi'			=> 'pages/list'
-		);
-		$this->load->view('layout/wrapper', $data, false);
-	}
+	// 	$data = array(
+	// 		'title'			=> 'pages - ' . $site->namaweb,
+	// 		'deskripsi'		=> 'pages - ' . $site->namaweb,
+	// 		'keywords'		=> 'pages - ' . $site->namaweb,
+	// 		'pagination' 	=> $pagination,
+	// 		'pages'			=> $pages,
+	// 		'site'			=> $site,
+	// 		'populer'		=> $populer,
+	// 		'pengumuman' 	=> $pengumuman,
+	// 		'list_side'		=> $list_side,
+	// 		'isi'			=> 'pages/list'
+	// 	);
+	// 	$this->load->view('layout/wrapper', $data, false);
+	// }
 
 	// Profil pages detail
 	public function tentang($slug_pages)
@@ -117,55 +117,15 @@ class Pages extends CI_Controller
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
-	// Page Jurusan
-	public function jurusan($slug_pages)
+	public function informasi($slug_pages)
 	{
 		$site 		= $this->konfigurasi_model->listing();
 		$pages 		= $this->pages_model->read($slug_pages);
-		$jurusan 	= $this->nav_model->nav_jurusan();
+		$informasi 	= $this->nav_model->nav_informasi();
 
 		if (count(array($pages)) < 1) {
 			redirect(base_url('oops'), 'refresh');
 		}
-
-		// $listing 	= $this->pages_model->listing_jurusan();
-
-		// Update hit
-		if ($pages) {
-			$newhits = $pages->hits + 1;
-			$hit = array(
-				'id_pages'	=> $pages->id_pages,
-				'hits'		=> $newhits
-			);
-			$this->pages_model->update_hit($hit);
-		}
-		//  End update hit
-
-		$data = array(
-			'title'		=> $pages->judul_pages . '-' . $site->namaweb,
-			'deskripsi'	=> $pages->judul_pages . '-' . $site->namaweb,
-			'keywords'	=> $pages->judul_pages . '-' . $site->namaweb,
-			'pages'	=> $pages,
-			'site'		=> $site,
-			'listing'	=> $jurusan,
-			'isi'		=> 'pages/jurusan'
-		);
-		$this->load->view('layout/wrapper', $data, FALSE);
-	}
-
-	// Page fasilitas
-	public function fasilitas($slug_pages)
-	{
-		$site 		= $this->konfigurasi_model->listing();
-		$pages 		= $this->pages_model->read($slug_pages);
-		$fasilitas 	= $this->nav_model->nav_fasilitas();
-		$pengumuman	= $this->berita_model->pengumuman();
-
-		if (count(array($pages)) < 1) {
-			redirect(base_url('oops'), 'refresh');
-		}
-
-		// $listing 	= $this->pages_model->listing_jurusan();
 
 		// Update hit
 		if ($pages) {
@@ -184,48 +144,8 @@ class Pages extends CI_Controller
 			'keywords'	=> $pages->judul_pages . '-' . $site->namaweb,
 			'pages'		=> $pages,
 			'site'		=> $site,
-			'pengumuman' => $pengumuman,
-			'listing'	=> $fasilitas,
-			'isi'		=> 'pages/fasilitas'
-		);
-		$this->load->view('layout/wrapper', $data, FALSE);
-	}
-
-	// Profil pages detail
-	public function program($slug_pages)
-	{
-		$site 		= $this->konfigurasi_model->listing();
-		$pages 		= $this->pages_model->read($slug_pages);
-		$profil 	= $this->nav_model->nav_program();
-		$download 	= $this->download_model->download();
-		$pengumuman	= $this->berita_model->pengumuman();
-
-		if (count(array($pages)) < 1) {
-			redirect(base_url('oops'), 'refresh');
-		}
-
-		// $listing 	= $this->pages_model->listing_pendidikan();
-
-		// Update hit
-		if ($pages) {
-			$newhits = $pages->hits + 1;
-			$hit = array(
-				'id_pages'	=> $pages->id_pages,
-				'hits'		=> $newhits
-			);
-			$this->pages_model->update_hit($hit);
-		}
-		//  End update hit
-
-		$data = array(
-			'title'		=> $pages->judul_pages . '-' . $site->namaweb,
-			'deskripsi'	=> $pages->judul_pages . '-' . $site->namaweb,
-			'keywords'	=> $pages->judul_pages . '-' . $site->namaweb,
-			'pages'		=> $pages,
-			'pengumuman' => $pengumuman,
-			'site'		=> $site,
-			'listing'	=> $profil,
-			'isi'		=> 'pages/program'
+			'listing'	=> $informasi,
+			'isi'		=> 'pages/informasi_publik'
 		);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
@@ -273,16 +193,18 @@ class Pages extends CI_Controller
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
-	// pelatihan pages detail
-	public function pelatihan($slug_pages)
+	// Page Jurusan
+	public function jurusan($slug_pages)
 	{
 		$site 		= $this->konfigurasi_model->listing();
 		$pages 		= $this->pages_model->read($slug_pages);
-		$pelatihan 	    = $this->nav_model->nav_pelatihan();
+		$jurusan 	= $this->nav_model->nav_jurusan();
 
 		if (count(array($pages)) < 1) {
 			redirect(base_url('oops'), 'refresh');
 		}
+
+		// $listing 	= $this->pages_model->listing_jurusan();
 
 		// Update hit
 		if ($pages) {
@@ -299,10 +221,10 @@ class Pages extends CI_Controller
 			'title'		=> $pages->judul_pages . '-' . $site->namaweb,
 			'deskripsi'	=> $pages->judul_pages . '-' . $site->namaweb,
 			'keywords'	=> $pages->judul_pages . '-' . $site->namaweb,
-			'pages'		=> $pages,
+			'pages'	=> $pages,
 			'site'		=> $site,
-			'listing'	=> $pelatihan,
-			'isi'		=> 'pages/pelatihan'
+			'listing'	=> $jurusan,
+			'isi'		=> 'pages/jurusan'
 		);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}

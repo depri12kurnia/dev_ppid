@@ -206,7 +206,7 @@ class Pages extends CI_Controller
 					);
 					$this->pages_model->tambah($data);
 					$this->session->set_flashdata('sukses', 'Data telah ditambah');
-					redirect(base_url('admin/pages/jenis_pages/' . $i->post('jenis_pages')), 'refresh');
+					redirect(base_url('admin/pages'), 'refresh');
 				}
 			} else {
 				$i 		= $this->input;
@@ -229,7 +229,7 @@ class Pages extends CI_Controller
 				);
 				$this->pages_model->tambah($data);
 				$this->session->set_flashdata('sukses', 'Data telah ditambah');
-				redirect(base_url('admin/pages/jenis_pages/' . $i->post('jenis_pages')), 'refresh');
+				redirect(base_url('admin/pages'), 'refresh');
 			}
 		}
 		// End masuk database
@@ -326,7 +326,7 @@ class Pages extends CI_Controller
 					);
 					$this->pages_model->edit($data);
 					$this->session->set_flashdata('sukses', 'Data telah diedit');
-					redirect(base_url('admin/pages/jenis_pages/' . $i->post('jenis_pages')), 'refresh');
+					redirect(base_url('admin/pages'), 'refresh');
 				}
 			} else {
 				$i 		= $this->input;
@@ -347,7 +347,7 @@ class Pages extends CI_Controller
 				);
 				$this->pages_model->edit($data);
 				$this->session->set_flashdata('sukses', 'Data telah diedit');
-				redirect(base_url('admin/pages/jenis_pages/' . $i->post('jenis_pages')), 'refresh');
+				redirect(base_url('admin/pages'), 'refresh');
 			}
 		}
 		// End masuk database

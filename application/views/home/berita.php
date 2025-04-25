@@ -4,7 +4,7 @@
         <div class="row">
             <div class="upcoming-events">
                 <div class="section-header">
-                    <h2 style="color: #686969;">Berita & Informasi</h2>
+                    <h4 style="color: #686969;">Berita & Informasi</h4>
                 </div>
                 <!-- .section-header -->
                 <div class="row">

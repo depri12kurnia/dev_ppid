@@ -70,34 +70,6 @@ class Nav_model extends CI_Model
 		return $query->result();
 	}
 
-	// Navigasi Jurusan
-	public function nav_jurusan()
-	{
-		$this->db->select('*');
-		$this->db->from('pages');
-		$this->db->where(array(
-			'jenis_pages'	=> 'Jurusan',
-			'status_pages'	=> 'Publish'
-		));
-		$this->db->order_by('urutan', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Navigasi fasilitas
-	public function nav_fasilitas()
-	{
-		$this->db->select('*');
-		$this->db->from('pages');
-		$this->db->where(array(
-			'jenis_pages'	=> 'Fasilitas',
-			'status_pages'	=> 'Publish'
-		));
-		$this->db->order_by('urutan', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
 	// Navigasi Pendidikan
 	public function nav_informasi()
 	{
@@ -112,41 +84,13 @@ class Nav_model extends CI_Model
 		return $query->result();
 	}
 
-	// Navigasi Pendidikan
-	public function nav_pelatihan()
-	{
-		$this->db->select('*');
-		$this->db->from('pages');
-		$this->db->where(array(
-			'jenis_pages'	=> 'Pelatihan',
-			'status_pages'	=> 'Publish'
-		));
-		$this->db->order_by('urutan', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Navigasi PUI
-	public function nav_pui()
-	{
-		$this->db->select('*');
-		$this->db->from('pages');
-		$this->db->where(array(
-			'jenis_pages'	=> 'PUI-PK',
-			'status_pages'	=> 'Publish'
-		));
-		$this->db->order_by('judul_pages', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
 	// Navigasi Pelayanan
-	public function nav_pelayanan()
+	public function nav_layanan()
 	{
 		$this->db->select('*');
 		$this->db->from('pages');
 		$this->db->where(array(
-			'jenis_pages'	=> 'Pelayanan',
+			'jenis_pages'	=> 'Layanan',
 			'status_pages'	=> 'Publish'
 		));
 		$this->db->order_by('judul_pages', 'ASC');
@@ -160,20 +104,6 @@ class Nav_model extends CI_Model
 		$this->db->select('*');
 		$this->db->from('staff');
 		$this->db->where(array('status_staff'	=> 'Yes'));
-		$this->db->order_by('urutan', 'ASC');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Navigasi profil
-	public function nav_topik()
-	{
-		$this->db->select('*');
-		$this->db->from('berita');
-		$this->db->where(array(
-			'jenis_berita'	=> 'Topik Prioritas',
-			'status_berita'	=> 'Publish'
-		));
 		$this->db->order_by('urutan', 'ASC');
 		$query = $this->db->get();
 		return $query->result();
@@ -213,17 +143,6 @@ class Nav_model extends CI_Model
 		$this->db->from('video');
 		$this->db->order_by('id_video', 'DESC');
 		$this->db->order_by('urutan', 'DESC');
-		$this->db->limit(8);
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	// Listing
-	public function nav_agenda()
-	{
-		$this->db->select('*');
-		$this->db->from('agenda');
-		$this->db->order_by('mulai', 'DESC');
 		$this->db->limit(8);
 		$query = $this->db->get();
 		return $query->result();

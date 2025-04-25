@@ -1,24 +1,53 @@
 <?php
 $site = $this->konfigurasi_model->listing();
 ?>
+
 <div class="box-layout">
-    <!-- End Pre-Loader -->
-    <header class="header-style-2">
+    <header class="header-style-1">
         <div class="bg-header-top">
             <div class="container">
                 <div class="row">
                     <div class="header-top">
-                        <ul class="h-contact">
-                            <li><i class="fa fa-university"></i> PPID Poltekkes Jakarta III</li>
-                        </ul>
-                        <div class="donate-option">
-                            <a href="https://wa.me/<?php echo str_replace('+', '', $site->whatsapp) ?>?text=Saya%20perlu%20informasi%20tentang%20Poltekkes%20Jakarta%20III.%20Apakah%20bisa%20dibantu?" target="_blank" style="padding-left: 10px; padding-right: 10px;"><i class="fa fa-whatsapp" aria-hidden="true"></i><?php echo $site->whatsapp ?></a>
-                            <a href="" style="padding-left: 10px; padding-right: 10px;"><i class="fa fa-mobile" aria-hidden="true"></i><?php echo $site->hp ?></a>
-                            <a href="tel:<?php echo $site->telepon ?>" style="padding-left: 10px; padding-right: 10px;"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $site->telepon ?></a>
-                            <a href="<?php echo base_url('kontak') ?>" style="padding-left: 10px; padding-right: 10px;"><i class="fa fa-envelope" aria-hidden="true"></i>Kontak</a>
-                            <a href="<?php echo base_url('helpdesk') ?>" style="padding-left: 10px; padding-right: 10px;"><i class="fa fa-question-circle" aria-hidden="true"></i>Faq & Helpdesk</a>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="<?php echo base_url() ?>"><img src="<?php echo $this->website->logo() ?>" alt="logo" class="img-responsive" /></a>
+                            </div>
+                            <!-- .col-md-3 -->
+                            <div class="col-md-9">
+                                <div class="header-top-right pull-right">
+                                    <ul class="header-contact">
+                                        <li>
+                                            <i class="flaticon-time-left"></i>
+                                            <div class="h-adress-content">
+                                                <h6>Waktu Pelayanan</h6>
+                                                <p>Senin-Kamis : 08:00 WIB - 16:00 WIB</br>Jum'at: 08:00 WIB - 16:30 WIB</p>
+                                            </div>
+                                            <!-- .h-adress-content -->
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-vibrating-phone"></i>
+                                            <div class="h-adress-content">
+                                                <h6>Telepon</h6>
+                                                <p>(021) 84978693</br>081112021333</p>
+                                            </div>
+                                            <!-- .h-adress-content -->
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-placeholder"></i>
+                                            <div class="h-adress-content">
+                                                <h6>Alamat</h6>
+                                                <p>Jl.Arteri JORR Jatiwarna Pondok Melati
+                                                    </br>Kota Bekasi Jawa Barat 17415</p>
+                                            </div>
+                                            <!-- .h-adress-content -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- .header-top-right -->
+                            </div>
+                            <!-- .col-md-9 -->
                         </div>
-                        <!-- .donate-option -->
+                        <!-- .row -->
                     </div>
                     <!-- .header-top -->
                 </div>
