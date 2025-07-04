@@ -454,10 +454,10 @@ $config['global_xss_filtering'] = TRUE;
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
  */
 $config['csrf_protection'] = true;
-$config['csrf_token_name'] = 'csrf_pusbangdik';
-$config['csrf_cookie_name'] = 'csrf_cookie_pusbangdik';
+$config['csrf_token_name'] = 'csrf_ppid';
+$config['csrf_cookie_name'] = 'csrf_cookie_ppid';
 $config['csrf_expire'] = 7200;
-$config['csrf_regenerate'] = true;
+$config['csrf_regenerate'] = false;
 $config['csrf_exclude_uris'] = array();
 
 /*
