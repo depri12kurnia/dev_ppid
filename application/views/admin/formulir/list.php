@@ -163,6 +163,9 @@
                     let html = `
                 <table class="table table-bordered">
                     <tr><th>Kode Tiket</th><td>${data.ticket_number}</td></tr>
+                    <tr><th>Informasi Layanan</th><td>${data.nama_layanan}</td></tr>
+                    <tr><th>Kategori Pemohon</th><td>${data.nama_kategori}</td></tr>
+                    <tr><th>Kategori Bidang</th><td>${data.nama_bidang}</td></tr>
                     <tr><th>Nama</th><td>${data.nama_lengkap}</td></tr>
                     <tr><th>Email</th><td>${data.email}</td></tr>
                     <tr><th>Nomor Identitas</th><td>${data.nomor_identitas}</td></tr>

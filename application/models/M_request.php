@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_request extends CI_Model
 {
-    // Model Untuk Ke Frontend
+
 
     public function insert_request($data)
     {
@@ -24,8 +24,4 @@ class M_request extends CI_Model
     {
         return $this->db->get('kategori_bidang')->result();
     }
-    // End Model Untuk Ke Frontend
-
-    // Model Untuk Beckend
-    // End Model Untuk Beckend
 }

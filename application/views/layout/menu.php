@@ -54,8 +54,8 @@ $nav_layanan = $this->nav_model->nav_layanan();
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 6px; padding-right: 6px;">Formulir Permohonan<span class="caret"></span></a>
                                 <ul class="dropdown-menu sub-menu">
-                                    <li><a href="#">Formulir Permohonan Informasi Publik</a></li>
-                                    <li><a href="#">Formulir Keberatan atas Informasi Publik</a></li>
+                                    <li><a href="<?php echo base_url('request') ?>">Formulir Permohonan Informasi Publik</a></li>
+                                    <li><a href="<?php echo base_url('request') ?>">Formulir Keberatan atas Informasi Publik</a></li>
                                 </ul>
                             </li>
 
