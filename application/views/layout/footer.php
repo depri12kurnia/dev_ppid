@@ -194,6 +194,10 @@ $site = $this->konfigurasi_model->listing();
     $(function() {
         $("#dokumen").DataTable();
     });
+
+    $(function() {
+        $("#informasi").DataTable();
+    });
 </script>
 </body>
 

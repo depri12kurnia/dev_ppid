@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Unduhan extends CI_Controller
+class Informasi extends CI_Controller
 {
 
     // Load database
@@ -31,53 +31,69 @@ class Unduhan extends CI_Controller
         $this->load->view('layout/wrapper', $data, false);
     }
 
-    public function informasi_publik()
+    public function berkala()
     {
         $site = $this->konfigurasi_model->listing();
         $download = $this->download_model->download();
-        // End paginasi
 
         $data = array(
-            'title' => 'Download - ' . $site->namaweb,
-            'deskripsi' => 'Download - ' . $site->namaweb,
-            'keywords' => 'Download - ' . $site->namaweb,
+            'title' => 'Informasi Berkala - ' . $site->namaweb,
+            'deskripsi' => 'Informasi Berkala - ' . $site->namaweb,
+            'keywords' => 'Informasi Berkala - ' . $site->namaweb,
             'download' => $download,
             'site' => $site,
-            'isi' => 'download/informasi_publik'
+            'isi' => 'download/list_berkala'
         );
         $this->load->view('layout/wrapper', $data, false);
     }
 
-    public function layanan_publik()
+    public function serta_merta()
     {
         $site = $this->konfigurasi_model->listing();
         $download = $this->download_model->download();
         // End paginasi
 
         $data = array(
-            'title' => 'Download - ' . $site->namaweb,
-            'deskripsi' => 'Download - ' . $site->namaweb,
-            'keywords' => 'Download - ' . $site->namaweb,
+            'title' => 'Informasi Serta Merta - ' . $site->namaweb,
+            'deskripsi' => 'Informasi Serta Merta - ' . $site->namaweb,
+            'keywords' => 'Informasi Serta Merta - ' . $site->namaweb,
             'download' => $download,
             'site' => $site,
-            'isi' => 'download/layanan_publik'
+            'isi' => 'download/list_sertamerta'
         );
         $this->load->view('layout/wrapper', $data, false);
     }
 
-    public function organisasi()
+    public function tersedia()
     {
         $site = $this->konfigurasi_model->listing();
         $download = $this->download_model->download();
         // End paginasi
 
         $data = array(
-            'title' => 'Download - ' . $site->namaweb,
-            'deskripsi' => 'Download - ' . $site->namaweb,
-            'keywords' => 'Download - ' . $site->namaweb,
+            'title' => 'Informasi Tersedia Setiap Saat - ' . $site->namaweb,
+            'deskripsi' => 'Informasi Tersedia Setiap Saat - ' . $site->namaweb,
+            'keywords' => 'Informasi Tersedia Setiap Saat - ' . $site->namaweb,
             'download' => $download,
             'site' => $site,
-            'isi' => 'download/organisasi'
+            'isi' => 'download/list_tersedia'
+        );
+        $this->load->view('layout/wrapper', $data, false);
+    }
+
+    public function standard_pelayanan()
+    {
+        $site = $this->konfigurasi_model->listing();
+        $download = $this->download_model->download();
+        // End paginasi
+
+        $data = array(
+            'title' => 'Standar pelayanan Informasi Publik - ' . $site->namaweb,
+            'deskripsi' => 'Standar pelayanan Informasi Publik - ' . $site->namaweb,
+            'keywords' => 'Standar pelayanan Informasi Publik - ' . $site->namaweb,
+            'download' => $download,
+            'site' => $site,
+            'isi' => 'download/list_standard'
         );
         $this->load->view('layout/wrapper', $data, false);
     }
@@ -97,7 +113,7 @@ class Unduhan extends CI_Controller
         $download = $this->download_model->kategori($id_kategori_download);
 
         $data = array(
-            'title' => 'Kategori download: ' .
+            'title' => 'Kategori Informasi: ' .
                 $kategori_download->nama_kategori_download,
             'deskripsi' => 'Kategori download: ' .
                 $kategori_download->nama_kategori_download,
@@ -126,7 +142,7 @@ class Unduhan extends CI_Controller
         $download = $this->download_model->jenis($id_jenis_download);
 
         $data = array(
-            'title' => 'Jenis download: ' .
+            'title' => 'Jenis Informasi: ' .
                 $jenis_download->nama_jenis_download,
             'deskripsi' => 'Jenis download: ' .
                 $jenis_download->nama_jenis_download,
@@ -173,42 +189,6 @@ class Unduhan extends CI_Controller
         $download = $this->download_model->detail($id_download);
         // Contents of photo.jpg will be automatically read
         force_download('./assets/upload/file/' . $download->gambar, null);
-    }
-    // Sorting Berdasarkan kategori
-    public function sertifikat()
-    {
-        $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
-        $download = $this->download_model->listingSertifikat();
-        // End paginasi
-
-        $data = array(
-            'title' => 'Dokumen - ' . $site->namaweb,
-            'deskripsi' => 'Dokumen - ' . $site->namaweb,
-            'keywords' => 'Dokumen - ' . $site->namaweb,
-            'dokumen' => $download,
-            'site' => $site,
-            'isi' => 'download/list_sertifikat'
-        );
-        $this->load->view('layout/wrapper', $data, false);
-    }
-
-    public function pedoman()
-    {
-        $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
-        $download = $this->download_model->listingPedoman();
-        // End paginasi
-
-        $data = array(
-            'title' => 'Dokumen - ' . $site->namaweb,
-            'deskripsi' => 'Dokumen - ' . $site->namaweb,
-            'keywords' => 'Dokumen - ' . $site->namaweb,
-            'dokumen' => $download,
-            'site' => $site,
-            'isi' => 'download/list_pedoman'
-        );
-        $this->load->view('layout/wrapper', $data, false);
     }
 }
 

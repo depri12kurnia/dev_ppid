@@ -201,6 +201,11 @@ class Download_model extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function get_jenis_download_by_kategori($kategori_id)
+    {
+        return $this->db->get_where('jenis_download', ['id_kategori_download' => $kategori_id])->result();
+    }
 }
 
 /* End of file Download_model.php */

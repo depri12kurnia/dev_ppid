@@ -50,12 +50,9 @@ echo form_open_multipart(base_url('admin/download/tambah'));
 
     <div class="col-md-4">
         <div class="form-group">
-            <label>Type Download/Prestasi Nasional-International</label>
+            <label>Type Download</label>
             <select name="type_dowload" class="form-control">
                 <option value="Download">Download Biasa</option>
-                <option value="Panduan">Panduan</option>
-                <option value="Nasional">Nasional</option>
-                <option value="International">International</option>
             </select>
         </div>
     </div>
@@ -91,7 +88,6 @@ echo form_open_multipart(base_url('admin/download/tambah'));
 
     </div>
 </div>
-
 
 <?php
 echo form_close();

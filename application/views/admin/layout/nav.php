@@ -243,6 +243,8 @@
 
                         </ul>
                     </li>
+                    <li class="nav-header">Informasi</li>
+
                     <li class="nav-header">Configuration</li>
                     <!-- TAUTAN -->
                     <li class="nav-item has-treeview">
