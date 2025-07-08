@@ -12,14 +12,6 @@ echo form_open(base_url('admin/download/proses'));
 </p>
 
 <br>
-<p class="btn-group">
-    <a href="<?php echo base_url('admin/download/listSertifikat') ?>" class="btn btn-default btn-sm">
-        <i class="fa fa-list"></i> Sertifikat</a>
-    <a href="<?php echo base_url('admin/download/listPedoman') ?>" class="btn btn-default btn-sm">
-        <i class="fa fa-list"></i> Pedoman</a>
-</p>
-
-
 
 <div class="table-responsive mailbox-messages">
     <table id="dataTable" class="display table table-bordered" cellspacing="0" width="100%">
@@ -45,7 +37,6 @@ echo form_open(base_url('admin/download/proses'));
 
             <?php $i = 1;
             foreach ($download as $download) { ?>
-
                 <tr>
                     <td>
                         <div class="mailbox-star text-center">
