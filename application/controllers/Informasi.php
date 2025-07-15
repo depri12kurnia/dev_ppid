@@ -13,28 +13,11 @@ class Informasi extends CI_Controller
         $this->load->model('jenis_download_model');
     }
 
-    // Main page
-    public function index()
-    {
-        $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
-        // End paginasi
-
-        $data = array(
-            'title' => 'Download - ' . $site->namaweb,
-            'deskripsi' => 'Download - ' . $site->namaweb,
-            'keywords' => 'Download - ' . $site->namaweb,
-            'download' => $download,
-            'site' => $site,
-            'isi' => 'download/informasi'
-        );
-        $this->load->view('layout/wrapper', $data, false);
-    }
 
     public function berkala()
     {
         $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
+        $download = $this->download_model->listingBerkala();
 
         $data = array(
             'title' => 'Informasi Berkala - ' . $site->namaweb,
@@ -50,7 +33,7 @@ class Informasi extends CI_Controller
     public function serta_merta()
     {
         $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
+        $download = $this->download_model->listingSertaMerta();
         // End paginasi
 
         $data = array(
@@ -67,7 +50,7 @@ class Informasi extends CI_Controller
     public function tersedia()
     {
         $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
+        $download = $this->download_model->listingTersedia();
         // End paginasi
 
         $data = array(
@@ -81,10 +64,26 @@ class Informasi extends CI_Controller
         $this->load->view('layout/wrapper', $data, false);
     }
 
+    public function dikecualikan()
+    {
+        $site = $this->konfigurasi_model->listing();
+        // $download = $this->download_model->listingBerkala();
+
+        $data = array(
+            'title' => 'Informasi Berkala - ' . $site->namaweb,
+            'deskripsi' => 'Informasi Berkala - ' . $site->namaweb,
+            'keywords' => 'Informasi Berkala - ' . $site->namaweb,
+            // 'download' => $download,
+            'site' => $site,
+            'isi' => 'download/list_dikecualikan'
+        );
+        $this->load->view('layout/wrapper', $data, false);
+    }
+
     public function standard_pelayanan()
     {
         $site = $this->konfigurasi_model->listing();
-        $download = $this->download_model->download();
+        $download = $this->download_model->listingStandardPelayanan();
         // End paginasi
 
         $data = array(

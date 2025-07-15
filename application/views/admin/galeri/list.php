@@ -60,7 +60,10 @@ echo form_open(base_url('admin/galeri/proses'));
                             Urutan: <?php echo $galeri->urutan ?>
                             <br>
                             Status Tampil Teks: <?php echo $galeri->status_text ?><br>
-                            <textarea name="aa"><?php echo base_url('assets/upload/image/' . $galeri->gambar) ?></textarea>
+                            <p hidden id="imageLink">
+                                <?php echo base_url('assets/upload/image/' . $galeri->gambar); ?>
+                            </p>
+                            <a onclick="copyLink()" class="btn btn-default btn-sm">Copy Link</a>
                         </small>
 
                     </td>
@@ -86,3 +89,15 @@ echo form_open(base_url('admin/galeri/proses'));
 
         </tbody>
     </table>
+
+    <!-- Script JavaScript -->
+    <script>
+        function copyLink() {
+            const link = document.getElementById("imageLink").innerText;
+            navigator.clipboard.writeText(link).then(function() {
+                alert("Link berhasil disalin!");
+            }, function(err) {
+                alert("Gagal menyalin link: " + err);
+            });
+        }
+    </script>

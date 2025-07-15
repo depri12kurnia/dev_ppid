@@ -54,7 +54,8 @@ $site_info = $this->konfigurasi_model->listing();
     <link href="https://cdn.jsdelivr.net/gh/depri12kurnia/assetsppid@f64214910bde7f1d8c88c39228790b3ab6ae4c58/dflip/css/themify-icons.min.css" rel="stylesheet">
     <!-- Flaticon -->
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
-
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style type="text/css" media="screen">
         p {
             margin-bottom: 15px;

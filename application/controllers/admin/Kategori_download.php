@@ -45,7 +45,7 @@ class Kategori_download extends CI_Controller
 			// End validasi
 
 			$data = array(
-				'title'		=> 'Kategori download',
+				'title'		=> 'Kategori Informasi',
 				'kategori_download'	=> $this->kategori_download_model->listing(),
 				'isi'		=> 'admin/kategori_download/list'
 			);

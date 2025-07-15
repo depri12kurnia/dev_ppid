@@ -43,10 +43,11 @@ $nav_layanan = $this->nav_model->nav_layanan();
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 6px; padding-right: 6px;">Informasi Publik<span class="caret"></span></a>
                                 <ul class="dropdown-menu sub-menu">
-                                    <?php foreach ($nav_informasi as $s) { ?>
-                                        <li><a href="<?php echo base_url('pages/informasi/' . $s->slug_pages) ?>">
-                                                <?php echo $s->judul_pages ?></a></li>
-                                    <?php } ?>
+                                    <li><a href="<?php echo base_url('informasi/berkala') ?>">Informasi Berkala</a></li>
+                                    <li><a href="<?php echo base_url('informasi/serta_merta') ?>">Informasi Serta Merta</a></li>
+                                    <li><a href="<?php echo base_url('informasi/tersedia') ?>">Informasi Tersedia Setiap Saat</a></li>
+                                    <li><a href="<?php echo base_url('informasi/dikecualikan') ?>">Informasi Publik Yang Dikecualikan</a></li>
+                                    <li><a href="<?php echo base_url('informasi/standard_pelayanan') ?>">Standard Pelayanan Informasi Publik</a></li>
                                 </ul>
                             </li>
 
@@ -54,8 +55,10 @@ $nav_layanan = $this->nav_model->nav_layanan();
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 6px; padding-right: 6px;">Formulir Permohonan<span class="caret"></span></a>
                                 <ul class="dropdown-menu sub-menu">
-                                    <li><a href="<?php echo base_url('request') ?>">Formulir Permohonan Informasi Publik</a></li>
-                                    <li><a href="<?php echo base_url('request') ?>">Formulir Keberatan atas Informasi Publik</a></li>
+                                    <!--<li><a href="<?php echo base_url('request') ?>">Formulir Permohonan Informasi Publik</a></li>-->
+                                    <!--<li><a href="<?php echo base_url('request') ?>">Formulir Keberatan atas Informasi Publik</a></li>-->
+                                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScmBb9N1Nzc2e2i4o7wP9-_ngFV8FZNO7h5b3iSxYubAlzr8Q/viewform?usp=sharing&ouid=104451866418619309385" target="_blank">Formulir Permohonan Informasi Publik</a></li>
+                                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfdaniH6Yk7tbOweo7MXygwx1PBZ25ONJiGCMeTv69t1z-hFQ/viewform?usp=sharing&ouid=104451866418619309385" target="_blank">Formulir Keberatan atas Informasi Publik</a></li>
                                 </ul>
                             </li>
 
@@ -63,9 +66,16 @@ $nav_layanan = $this->nav_model->nav_layanan();
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 6px; padding-right: 6px;">Laporan<span class="caret"></span></a>
                                 <ul class="dropdown-menu sub-menu">
-                                    <li><a href="#">Laporan Akses Informasi Publik</a></li>
-                                    <li><a href="#">Laporan Layanan Informasi Publik</a></li>
-                                    <li><a href="#">Laporan Survei Informasi Publik</a></li>
+                                    <li><a href="<?php echo base_url('laporan/laporan_akses') ?>">Laporan Akses Informasi Publik</a></li>
+                                    <li><a href="<?php echo base_url('laporan/laporan_layanan') ?>">Laporan Layanan Informasi Publik</a></li>
+                                </ul>
+                            </li>
+                            <!-- SKM -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 6px; padding-right: 6px;">SKM<span class="caret"></span></a>
+                                <ul class="dropdown-menu sub-menu">
+                                    <li><a href="https://docs.google.com/forms/d/195Xb1I6B2BNnfIbSvjzc5DtCyZRebJDeC6R5Zd0Zi1I/edit?pli=1" target="_blank">Survey</a></li>
+                                    <li><a href="<?php echo base_url('laporan/laporan_survey') ?>">Laporan Survey</a></li>
                                 </ul>
                             </li>
                             <!-- Helpdesk -->

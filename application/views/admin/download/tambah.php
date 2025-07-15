@@ -16,15 +16,15 @@ echo form_open_multipart(base_url('admin/download/tambah'));
     <div class="col-md-12">
 
         <div class="form-group form-group-lg">
-            <label>Nama file/Nama Peserta Untuk Prestasi</label>
-            <input type="text" name="judul_download" class="form-control" placeholder="Nama File/Nama Peserta"
+            <label>Nama Informasi</label>
+            <input type="text" name="judul_download" class="form-control" placeholder="Nama Informasi"
                 value="<?php echo set_value('judul_download') ?>">
         </div>
     </div>
 
     <div class="col-md-4">
         <div class="form-group">
-            <label>Kategori Download</label>
+            <label>Kategori Informasi</label>
             <select name="id_kategori_download" id="kategori_download" class="form-control">
                 <option>No Selected</option>
                 <?php foreach ($kategori_download as $row) { ?>
@@ -37,7 +37,7 @@ echo form_open_multipart(base_url('admin/download/tambah'));
 
     <div class="col-md-4">
         <div class="form-group">
-            <label>Jenis Download</label>
+            <label>Jenis Informasi</label>
             <select name="id_jenis_download" id="jenis_download" class="form-control">
                 <option>No Selected</option>
                 <?php foreach ($jenis_download as $row) { ?>
@@ -50,7 +50,7 @@ echo form_open_multipart(base_url('admin/download/tambah'));
 
     <div class="col-md-4">
         <div class="form-group">
-            <label>Type Download</label>
+            <label>Type Informasi</label>
             <select name="type_dowload" class="form-control">
                 <option value="Download">Download Biasa</option>
             </select>
@@ -76,9 +76,9 @@ echo form_open_multipart(base_url('admin/download/tambah'));
 
     <div class="col-md-12">
         <div class="form-group">
-            <label>Isi/keterangan/Penghargaan</label>
+            <label>Isi/keterangan</label>
             <textarea name="isi" id="isi" class="form-control"
-                placeholder="Isi download"><?php echo set_value('isi') ?></textarea>
+                placeholder="Isi/Keterangan"><?php echo set_value('isi') ?></textarea>
         </div>
 
         <div class="form-group">

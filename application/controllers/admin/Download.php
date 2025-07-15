@@ -24,7 +24,7 @@ class Download extends CI_Controller
     {
         $download = $this->download_model->listing();
         $data = array(
-            'title' => 'Download All',
+            'title' => 'Data Informasi',
             'download' => $download,
             'isi' => 'admin/download/list'
         );
@@ -155,7 +155,7 @@ class Download extends CI_Controller
         }
         // End masuk database
         $data = array(
-            'title' => 'Tambah Download',
+            'title' => 'Tambah Informasi',
             'kategori_download' => $kategori_download,
             'jenis_download' => $jenis_download,
             'isi' => 'admin/download/tambah'

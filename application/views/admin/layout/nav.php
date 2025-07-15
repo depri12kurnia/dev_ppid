@@ -115,6 +115,55 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-header">Informasi</li>
+                    <!-- DOWNLOAD FILE INFORMASI -->
+                    <?php
+                    $is_download_active = (
+                        $this->uri->segment(1) == 'admin' &&
+                        in_array($this->uri->segment(2), ['download', 'kategori_download', 'jenis_download'])
+                    );
+                    ?>
+
+                    <li class="nav-item has-treeview <?= $is_download_active ? 'menu-open' : '' ?>">
+                        <a href="#" class="nav-link <?= $is_download_active ? 'active' : '' ?>">
+                            <i class="nav-icon fa fa-download"></i>
+                            <p>FILE INFORMASI <i class="right fa fa-angle-left"></i></p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/download') ?>"
+                                    class="nav-link <?= ($this->uri->segment(2) == 'download' && $this->uri->segment(3) == '') ? 'active' : '' ?>">
+                                    <i class="fa fa-table nav-icon"></i>
+                                    <p>Data Informasi All</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/download/tambah') ?>"
+                                    class="nav-link <?= ($this->uri->segment(2) == 'download' && $this->uri->segment(3) == 'tambah') ? 'active' : '' ?>">
+                                    <i class="fa fa-plus nav-icon"></i>
+                                    <p>Tambah Informasi</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/kategori_download') ?>"
+                                    class="nav-link <?= ($this->uri->segment(2) == 'kategori_download') ? 'active' : '' ?>">
+                                    <i class="fa fa-tags nav-icon"></i>
+                                    <p>Kategori Informasi</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/jenis_download') ?>"
+                                    class="nav-link <?= ($this->uri->segment(2) == 'jenis_download') ? 'active' : '' ?>">
+                                    <i class="fa fa-tags nav-icon"></i>
+                                    <p>Jenis Informasi</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
                     <li class="nav-header">Image</li>
 
@@ -336,56 +385,6 @@
                                     class="nav-link <?= ($this->uri->segment(2) == 'bagian') ? 'active' : '' ?>">
                                     <i class="fa fa-tags nav-icon"></i>
                                     <p>Bagian/Departemen</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <!-- DOWNLOAD FILE INFORMASI -->
-                    <?php
-                    $is_download_active = (
-                        $this->uri->segment(1) == 'admin' &&
-                        in_array($this->uri->segment(2), ['download', 'kategori_download', 'jenis_download'])
-                    );
-                    ?>
-
-                    <li class="nav-item has-treeview <?= $is_download_active ? 'menu-open' : '' ?>">
-                        <a href="#" class="nav-link <?= $is_download_active ? 'active' : '' ?>">
-                            <i class="nav-icon fa fa-download"></i>
-                            <p>FILE DOWNLOAD <i class="right fa fa-angle-left"></i></p>
-                        </a>
-
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="<?= base_url('admin/download') ?>"
-                                    class="nav-link <?= ($this->uri->segment(2) == 'download' && $this->uri->segment(3) == '') ? 'active' : '' ?>">
-                                    <i class="fa fa-table nav-icon"></i>
-                                    <p>Data Download All</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="<?= base_url('admin/download/tambah') ?>"
-                                    class="nav-link <?= ($this->uri->segment(2) == 'download' && $this->uri->segment(3) == 'tambah') ? 'active' : '' ?>">
-                                    <i class="fa fa-plus nav-icon"></i>
-                                    <p>Tambah Download</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="<?= base_url('admin/kategori_download') ?>"
-                                    class="nav-link <?= ($this->uri->segment(2) == 'kategori_download') ? 'active' : '' ?>">
-                                    <i class="fa fa-tags nav-icon"></i>
-                                    <p>Kategori Download</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="<?= base_url('admin/jenis_download') ?>"
-                                    class="nav-link <?= ($this->uri->segment(2) == 'jenis_download') ? 'active' : '' ?>">
-                                    <i class="fa fa-tags nav-icon"></i>
-                                    <p>Jenis Download</p>
                                 </a>
                             </li>
                         </ul>

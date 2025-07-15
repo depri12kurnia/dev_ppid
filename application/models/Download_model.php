@@ -172,7 +172,7 @@ class Download_model extends CI_Model
         $this->db->delete('download', $data);
     }
 
-    public function listingSertifikat()
+    public function listingBerkala()
     {
         $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
         $this->db->from('download');
@@ -181,13 +181,13 @@ class Download_model extends CI_Model
         $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
         $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
         // End join
-        $this->db->like('nama_jenis_download', 'Sertifikat');
-        $this->db->order_by('judul_download', 'ASC');
+        $this->db->like('nama_kategori_download', 'Informasi Berkala');
+        $this->db->order_by('nama_kategori_download', 'ASC');
         $query = $this->db->get();
         return $query->result();
     }
 
-    public function listingPedoman()
+    public function listingSertaMerta()
     {
         $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
         $this->db->from('download');
@@ -196,15 +196,85 @@ class Download_model extends CI_Model
         $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
         $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
         // End join
-        $this->db->like('nama_jenis_download', 'Pedoman');
+        $this->db->like('nama_jenis_download', 'Dokumen Informasi Serta Merta');
         $this->db->order_by('judul_download', 'DESC');
         $query = $this->db->get();
         return $query->result();
     }
 
-    public function get_jenis_download_by_kategori($kategori_id)
+    public function listingTersedia()
     {
-        return $this->db->get_where('jenis_download', ['id_kategori_download' => $kategori_id])->result();
+        $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
+        $this->db->from('download');
+        // Join dg 3 tabel
+        $this->db->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
+        $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
+        // End join
+        $this->db->like('nama_jenis_download', 'Dokumen Informasi Tersedia Setiap Saat');
+        $this->db->order_by('judul_download', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function listingStandardPelayanan()
+    {
+        $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
+        $this->db->from('download');
+        // Join dg 3 tabel
+        $this->db->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
+        $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
+        // End join
+        $this->db->like('nama_jenis_download', 'Dokumen Standard Pelayanan Informasi Publik');
+        $this->db->order_by('judul_download', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function listingLaporanAkses()
+    {
+        $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
+        $this->db->from('download');
+        // Join dg 3 tabel
+        $this->db->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
+        $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
+        // End join
+        $this->db->like('nama_jenis_download', 'Laporan Akses Informasi Publik');
+        $this->db->order_by('judul_download', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function listingLaporanLayanan()
+    {
+        $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
+        $this->db->from('download');
+        // Join dg 3 tabel
+        $this->db->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
+        $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
+        // End join
+        $this->db->like('nama_jenis_download', 'Laporan Informasi Layanan Publik');
+        $this->db->order_by('judul_download', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function listingLaporanSurvey()
+    {
+        $this->db->select('download.*, kategori_download.nama_kategori_download, jenis_download.nama_jenis_download, users.nama');
+        $this->db->from('download');
+        // Join dg 3 tabel
+        $this->db->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $this->db->join('jenis_download', 'jenis_download.id_jenis_download = download.id_jenis_download', 'LEFT');
+        $this->db->join('users', 'users.id_user = download.id_user', 'LEFT');
+        // End join
+        $this->db->like('nama_jenis_download', 'Laporan Survey');
+        $this->db->order_by('judul_download', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
     }
 }
 

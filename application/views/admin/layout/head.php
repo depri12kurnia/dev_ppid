@@ -31,7 +31,10 @@
   <script src="https://cdn.jsdelivr.net/gh/depri12kurnia/assetsppid@e4e3b45042c45edbfbcbee318022938e0b24f89f/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
   <script>
     tinymce.init({
-      selector: '#mytextarea'
+      selector: '#mytextarea',
+      plugins: 'advlist autolink lists link image charmap preview anchor pagebreak code',
+      toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist outdent indent | link image | code',
+      height: 300
     });
   </script>
 </head>

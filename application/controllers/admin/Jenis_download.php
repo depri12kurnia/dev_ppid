@@ -24,21 +24,32 @@ class Jenis_download extends CI_Controller
         // Validasi
         $valid = $this->form_validation;
 
-        $valid->set_rules('nama_jenis_download', 'Nama jenis_download', 'required|is_unique[jenis_download.nama_jenis_download]',
-            array('required' => 'Nama jenis_download harus diisi',
-                'is_unique' => 'Nama jenis_download sudah ada. Buat Nama jenis_download baru!'));
+        $valid->set_rules(
+            'nama_jenis_download',
+            'Nama jenis_download',
+            'required|is_unique[jenis_download.nama_jenis_download]',
+            array(
+                'required' => 'Nama jenis_download harus diisi',
+                'is_unique' => 'Nama jenis_download sudah ada. Buat Nama jenis_download baru!'
+            )
+        );
 
-        $valid->set_rules('urutan', 'Urutan', 'required',
-            array('required' => 'Urutan harus diisi'));
+        $valid->set_rules(
+            'urutan',
+            'Urutan',
+            'required',
+            array('required' => 'Urutan harus diisi')
+        );
 
         if ($valid->run() === false) {
             // End validasi
 
             $data = array(
-                'title' => 'Jenis Download',
+                'title' => 'Jenis Informasi',
                 'jenis_download' => $this->jenis_download_model->listing(),
                 'kategori_download' => $this->jenis_download_model->get_kategori(),
-                'isi' => 'admin/jenis_download/list');
+                'isi' => 'admin/jenis_download/list'
+            );
             $this->load->view('admin/layout/wrapper', $data, false);
             // Proses masuk ke database
         } else {
@@ -65,19 +76,29 @@ class Jenis_download extends CI_Controller
         // Validasi
         $valid = $this->form_validation;
 
-        $valid->set_rules('nama_jenis_download', 'Nama jenis_download', 'required',
-            array('required' => 'Nama jenis_download harus diisi'));
+        $valid->set_rules(
+            'nama_jenis_download',
+            'Nama jenis_download',
+            'required',
+            array('required' => 'Nama jenis_download harus diisi')
+        );
 
-        $valid->set_rules('urutan', 'Urutan', 'required',
-            array('required' => 'Urutan harus diisi'));
+        $valid->set_rules(
+            'urutan',
+            'Urutan',
+            'required',
+            array('required' => 'Urutan harus diisi')
+        );
 
         if ($valid->run() === false) {
             // End validasi
 
-            $data = array('title' => 'Edit Jenis Download',
+            $data = array(
+                'title' => 'Edit Jenis Download',
                 'jenis_download' => $this->jenis_download_model->detail($id_jenis_download),
                 'kategori_download' => $this->jenis_download_model->get_kategori(),
-                'isi' => 'admin/jenis_download/edit');
+                'isi' => 'admin/jenis_download/edit'
+            );
             $this->load->view('admin/layout/wrapper', $data, false);
             // Proses masuk ke database
         } else {
@@ -105,7 +126,7 @@ class Jenis_download extends CI_Controller
         // Tambahkan proteksi halaman
         $url_pengalihan = str_replace('index.php/', '', current_url());
         $pengalihan = $this->session->set_userdata('pengalihan', $url_pengalihan);
-// Ambil check login dari simple_login
+        // Ambil check login dari simple_login
         $this->simple_login->check_login($pengalihan);
 
         $data = array('id_jenis_download' => $id_jenis_download);

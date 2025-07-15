@@ -3,7 +3,7 @@
         <div class="row">
             <div class="our-services-option">
                 <div class="section-header">
-                    <h4>Informasi Standard</h4>
+                    <h4>Laporan Survey</h4>
                 </div>
                 <!-- .section-header -->
                 <div class="row">

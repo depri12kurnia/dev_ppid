@@ -20,6 +20,8 @@ $site = $this->konfigurasi_model->listing();
                                             <span><?php echo $site->alamat ?></span>
                                         </li>
                                     </ul>
+                                    <!-- Histats.com  (div with counter) -->
+                                    <div id="histats_counter"></div>
                                 </div>
                                 <!-- .address -->
                             </div>
@@ -183,7 +185,10 @@ $site = $this->konfigurasi_model->listing();
 <!-- DataTables JS -->
 <script src="https://cdn.jsdelivr.net/gh/depri12kurnia/assetsadminlte3.2.0@c4cd9975aa7ae3113ef356aed8e37f56b126d3d6/plugins/datatables/jquery.dataTables.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/depri12kurnia/assetsadminlte3.2.0@c4cd9975aa7ae3113ef356aed8e37f56b126d3d6/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script>
     $(function() {
         $('.lazy').Lazy();
@@ -199,6 +204,22 @@ $site = $this->konfigurasi_model->listing();
         $("#informasi").DataTable();
     });
 </script>
+
+<script type="text/javascript">
+    var _Hasync = _Hasync || [];
+    _Hasync.push(['Histats.start', '1,4962798,4,408,270,55,00011111']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+        var hs = document.createElement('script');
+        hs.type = 'text/javascript';
+        hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();
+</script>
+<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4962798&101" alt="hit tracker" border="0"></a></noscript>
+<!-- Histats.com  END  -->
 </body>
 
 </html>

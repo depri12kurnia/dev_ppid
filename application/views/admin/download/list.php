@@ -52,8 +52,11 @@ echo form_open(base_url('admin/download/proses'));
                     </td>
                     <td><?php echo $download->judul_download ?>
                         <br><small>
-                            Link:<br>
-                            <textarea name="aa"><?php echo base_url('download/unduh/' . $download->id_download) ?></textarea>
+                            <br>
+                            <p hidden id="imageLink">
+                                <?php echo base_url('admin/download/unduh/' . $download->id_download); ?>
+                            </p>
+                            <a onclick="copyLink()" class="btn btn-default btn-sm">Copy Link</a>
                         </small>
                     </td>
                     <td><?php echo $download->nama_kategori_download ?>
@@ -83,3 +86,15 @@ echo form_open(base_url('admin/download/proses'));
     </table>
 </div>
 <?php echo form_close(); ?>
+
+<!-- Script JavaScript -->
+<script>
+    function copyLink() {
+        const link = document.getElementById("imageLink").innerText;
+        navigator.clipboard.writeText(link).then(function() {
+            alert("Link berhasil disalin!");
+        }, function(err) {
+            alert("Gagal menyalin link: " + err);
+        });
+    }
+</script>

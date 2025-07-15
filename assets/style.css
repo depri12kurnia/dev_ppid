@@ -434,24 +434,20 @@ hr {
 }
 
 ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul,
 ol {
   margin: 0;
   padding: 0;
 }
 
+/* Hati-hati di sini! Jangan hapus list-style dari <li> */
 ul {
-  list-style: none;
+  list-style: disc;
+  padding-left: 1.5rem;
 }
 
 ol {
-  list-style: none;
+  list-style: decimal;
+  padding-left: 1.5rem;
 }
 
 li>ul,
@@ -1294,12 +1290,9 @@ section {
 
 
 
-@media screen and (min-width: 767px) {
-
+@media screen and (min-width: 768px) {
 
   .header-style-1 .sub-menu,
-  .header-style-2 .sub-menu,
-  .header-style-3 .sub-menu,
   .sub-sub-menu {
     display: block;
     visibility: hidden;
@@ -1319,11 +1312,7 @@ section {
 
   }
 
-
-
-  .header-style-1 .main-menu .nav>.dropdown:hover ul.sub-menu,
-  .header-style-2 .main-menu .nav>.dropdown:hover ul.sub-menu,
-  .header-style-3 .main-menu .nav>.dropdown:hover ul.sub-menu {
+  .header-style-1 .main-menu .nav>.dropdown:hover ul.sub-menu {
     top: 70px;
     opacity: 1;
     visibility: visible;
@@ -1332,8 +1321,6 @@ section {
   .boxed #bs-example-navbar-collapse-1 {
     display: inline-block !important;
   }
-
-
 
   .sub-sub-menu {
     left: 100%;
@@ -1355,8 +1342,6 @@ section {
 }
 
 .header-style-1 .main-menu .sub-menu li,
-.header-style-2 .main-menu .sub-menu li,
-.header-style-3 .main-menu .sub-menu li,
 .sub-sub-menu li {
   border-bottom: 1px solid rgba(221, 221, 221, 0.25);
 }
@@ -1420,9 +1405,7 @@ section {
   visibility: visible;
 }
 
-.header-style-1 .main-menu .nav>li>a:hover,
-.header-style-2 .main-menu .nav>li>a:hover,
-.header-style-3 .main-menu .nav>li>a:hover {
+.header-style-1 .main-menu .nav>li>a:hover {
   color: #000000
 }
 
@@ -1698,10 +1681,6 @@ section {
   padding-right: 3px;
 }
 
-
-
-
-
 /*======================
 	End Header css
 ===============================================*/
@@ -1845,8 +1824,6 @@ section {
   transition-delay: 1s;
 }
 
-
-
 .carousel-control {
   width: 0;
   opacity: 1;
@@ -1860,7 +1837,7 @@ section {
   height: 50px;
   font-size: 24px;
   line-height: 52px;
-  background: #cc8800;
+  background: #00B9AD;
 }
 
 .carousel-control:focus,
@@ -1875,7 +1852,7 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -1892,21 +1869,9 @@ section {
   right: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /*======================
 	End Slider
 ================================*/
-
-
 
 /*======================
 	Start People Work css
@@ -2340,12 +2305,9 @@ section {
 }
 
 
-
 /*===========================
 	End Testimonial Section
 =============================================*/
-
-
 
 /*===========================
 	Start Blog Section
@@ -2447,8 +2409,6 @@ section {
   padding-bottom: 120px;
 }
 
-.sponsors-option {}
-
 .sopnsors-items a {
   box-shadow: 1px 0px 14px 1px #ebebeb;
   overflow: hidden;
@@ -2482,8 +2442,6 @@ section {
   text-transform: capitalize;
   font-weight: bold;
 }
-
-.widgets-content {}
 
 .widgets-content p {
   color: #ffffff;
@@ -2690,206 +2648,6 @@ section {
 =============================================*/
 
 
-
-/*========================================================
-							Home 02
-========================================================================================*/
-
-/*=======================================
-	Header 2
-====================================================*/
-
-.header-style-2 .main-menu .navbar-collapse,
-.header-style-3 .main-menu .navbar-collapse {
-  float: right;
-}
-
-.header-style-2 .bg-header-top {
-  background: #cc8800;
-  color: #FFF;
-}
-
-.header-style-2 .menu-scroll.menu-fixed {
-  box-shadow: 0 0 7px 0 #ddd;
-}
-
-.h-contact {
-  float: left;
-}
-
-.h-contact li {
-  display: inline-block;
-}
-
-.h-contact li {
-  font-size: 12px;
-  color: #fff;
-  padding: 10px 12px;
-}
-
-.h-contact li:first-child {
-  padding-left: 0;
-}
-
-.h-contact li:last-child {
-  padding-right: 0;
-}
-
-.header-style-2 .h-contact li [class^="flaticon-"]:before,
-.header-style-2 .h-contact li [class*=" flaticon-"]:before,
-.header-style-2 .h-contact li [class^="flaticon-"]:after,
-.header-style-2 .h-contact li [class*=" flaticon-"]:after {
-  display: inline-block;
-  font-size: 14px;
-  padding-right: 6px;
-}
-
-.header-style-2 .donate-option {
-  float: right;
-  background: #cc8800;
-}
-
-.header-style-2 .donate-option a {
-  background: #cc8800;
-  padding: 13px 28.5px;
-}
-
-.header-style-2 .donate-option a:hover {
-  background: #000;
-}
-
-.show-res-logo {
-  display: none;
-}
-
-.navbar-brand {
-  padding-left: 0;
-}
-
-.header-style-2 .bg-main-menu {
-  background: #ffffff;
-}
-
-.header-style-2 .main-menu .nav>li>a {
-  color: #000000;
-}
-
-.header-style-2 .main-menu .nav>li>a:hover,
-.header-style-3 .main-menu .nav>li>a:hover {
-  color: #cc8800;
-}
-
-.header-style-2 .main-menu .nav>li.active a {
-  color: #cc8800;
-}
-
-.header-style-2 .sub-menu,
-.header-style-3 .sub-menu,
-.header-style-2 .sub-sub-menu,
-.header-style-3 .sub-sub-menu {
-  background: #000000;
-}
-
-.header-style-2 .navbar-right .dropdown-menu,
-.header-style-3 .navbar-right .dropdown-menu {
-  left: 0;
-  right: auto;
-}
-
-.header-style-2 .sub-menu,
-.header-style-3 .sub-menu {
-  top: 120px;
-}
-
-.header-style-2 .main-menu .nav>.dropdown:hover ul.sub-menu,
-.header-style-3 .main-menu .nav>.dropdown:hover ul.sub-menu {
-  top: 90px;
-}
-
-.header-style-2 .main-menu .nav>li>a,
-.header-style-3 .main-menu .nav>li>a {
-  padding: 33px 17px;
-}
-
-.header-style-2 .main-menu .sub-menu li a:hover,
-.header-style-3 .main-menu .sub-menu li a:hover {
-  background: #cc8800;
-  color: #fff;
-}
-
-.header-style-2 .navbar-nav li .active,
-.header-style-3 .navbar-nav li .active {
-  color: #cc8800 !important;
-}
-
-.header-style-2 .sub-active a,
-.header-style-3 .sub-active a {
-  background: #cc8800;
-  color: #fff !important;
-}
-
-.header-style-2 .cart-icon .fa,
-.header-style-3 .cart-icon .fa {
-  color: #000000;
-}
-
-.header-style-2 .count-cart,
-.header-style-3 .count-cart {
-  color: #fff;
-  background: #cc8800;
-}
-
-.header-style-2 .cart-option,
-.header-style-3 .cart-option {
-  padding: 35px 22px 24px 22px;
-}
-
-.header-style-2 .cart-option:hover .cart-dropdown-menu,
-.header-style-3 .cart-option:hover .cart-dropdown-menu {
-  top: 90px;
-}
-
-.header-style-2 .search-box,
-.header-style-3 .search-box {
-  margin: 23px 0 25px 0;
-}
-
-.header-style-2 .search-box i,
-.header-style-3 .search-box i {
-  color: #000000;
-}
-
-.header-style-2 #all-search {
-  background: #fff;
-  color: #000000;
-}
-
-.header-style-2 #all-search::-webkit-input-placeholder {
-  color: #000;
-}
-
-.header-style-2 #all-search:-moz-placeholder {
-  color: #000;
-}
-
-.header-style-2 #all-search::-moz-placeholder {
-  color: #000;
-}
-
-.header-style-2 #all-search:-ms-input-placeholder {
-  color: #000;
-}
-
-
-
-
-
-
-/*======================
-	End Header
-=====================================*/
-
-
 /*===========================
 	Start Slider 
 =========================================*/
@@ -2910,8 +2668,6 @@ section {
   background: rgba(55, 109, 6, 0.34);
 }
 
-
-
 /*================================
 	Start Slider Section 
 =============================================*/
@@ -2921,39 +2677,8 @@ section {
 	Start About Greenforest Section 
 ====================================================*/
 
-.about-greenforest {
-  padding: 110px 0 75px 0;
-}
-
-.about-greenforest-content h2 {
-  text-transform: capitalize;
-}
-
-.about-greenforest-content p span {
-  display: inline-block;
-  font-weight: 600;
-  color: #686969;
-  margin: 11px 0 18px 0;
-  text-align: justify;
-}
-
-.about-greenforest-content .btn-default {
-  padding: 14px 28px 12px 28px;
-  margin: 40px 20px 0 0;
-}
-
-.about-greenforest-content .btn-default:active,
-.about-greenforest-content .btn-default:focus {
-  color: #cc8800;
-}
-
-.about-greenforest-content .btn-default:hover {
-  color: #fff;
-}
-
 .about-section {
   padding: 80px 0;
-  background-color: #f7f9fc;
 }
 
 .about-content {
@@ -2961,14 +2686,22 @@ section {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.about-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .about-content h2 {
   font-size: 32px;
-  text-transform: capitalize;
   font-weight: bold;
+  text-transform: capitalize;
   margin-bottom: 20px;
   color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .about-content p {
@@ -2976,6 +2709,13 @@ section {
   line-height: 1.8;
   color: #555;
   text-align: justify;
+}
+
+.about-content p span {
+  display: inline-block;
+  font-weight: 600;
+  color: #686969;
+  margin: 11px 0 18px 0;
 }
 
 .about-content .btn-group {
@@ -2987,12 +2727,53 @@ section {
   font-size: 15px;
   border-radius: 10px;
   margin-right: 10px;
+  background: linear-gradient(to right, #00b9ad, #00d4b0);
+  color: #fff;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.about-content .btn:hover {
+  background: linear-gradient(to right, #00998f, #00c4a4);
+  color: #fff;
 }
 
 .about-image img {
   border-radius: 20px;
   width: 100%;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Animasi masuk dari kiri & kanan */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 
@@ -3000,6 +2781,91 @@ section {
 	End About Greenforest Section 
 ==========================================*/
 
+/* Performance Section */
+/* ======= Penghargaan Layanan Publik Section ======= */
+.performance-section {
+  padding: 80px 0;
+  background: #f7f9fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.performance-section h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1c3f60;
+}
+
+.performance-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+/* Kontainer Gambar */
+.about-image {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gaya Gambar */
+.about-image img {
+  width: 100%;
+  max-width: 220px;
+  /* Ukuran gambar diperbesar */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .performance-section {
+    padding: 60px 0;
+  }
+
+  .performance-section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .performance-section p {
+    font-size: 16px;
+  }
+
+  .about-image {
+    gap: 15px;
+  }
+
+  .about-image img {
+    max-width: 160px;
+  }
+
+  .carousel-inner img {
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-inner img:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* End Performance Section */
 
 /*=======================
 	Start Recent Project Section 
@@ -3227,66 +3093,83 @@ div#filters {
 ==========================================*/
 
 .bg-servicesstyle2-section {
-  padding: 0 0 90px 0;
+  padding: 50px 0;
+  background-color: #f7f9fc;
 }
 
-.our-services-option {}
+.section-header h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #555;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
 
 .our-services-box {
-  border: 1px solid #f0f0f0;
-  padding: 8px;
-  margin-bottom: 30px;
-}
-
-.our-services-items {
-  text-align: center;
-  padding: 8px 22px 18px 22px;
-  border: 1px solid transparent;
-}
-
-.our-services-content {
-  padding-top: 4px;
-}
-
-.our-services-content h4 {
-  padding-bottom: 8px;
-}
-
-.our-services-content>a {
-  font-size: 14px;
-  font-weight: 700;
-  color: #000;
-  text-transform: capitalize;
-  padding-top: 15px;
-}
-
-.our-services-content>a .fa {
-  padding-left: 4px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
 }
 
 .our-services-box:hover {
-  box-shadow: 1px 0px 14px 1px #ebebeb;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.our-services-box:hover .our-services-items {
-  border: 1px solid #f0f0f0;
+.our-services-items {
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.our-services-box:hover [class^="flaticon-"]:before,
-.our-services-box:hover [class*=" flaticon-"]:before,
-.our-services-box:hover [class^="flaticon-"]:after,
-.our-services-box:hover [class*=" flaticon-"]:after {
-  -webkit-transform: scale(1.08, 1.08);
-  transform: scale(1.08, 1.08);
+.our-services-items i {
+  font-size: 40px;
+  color: #00B9AD;
+  margin-bottom: 20px;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.our-services-box:hover .our-services-content h4 a,
-.our-services-box:hover .our-services-content>a {
-  color: #cc8800;
+.our-services-box:hover i {
+  transform: scale(1.1);
 }
 
+.our-services-content h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
 
+.our-services-content p {
+  font-size: 14px;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 20px;
+}
 
+.our-services-content a.btn {
+  background-color: #00B9AD;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.our-services-content a.btn:hover {
+  background-color: #00978c;
+  color: #fff;
+}
 
 /*=======================
 	End Home2 Service Section 
@@ -4816,10 +4699,6 @@ div#filters {
   padding: 120px 0 145px 0;
 }
 
-.single-events {}
-
-.single-event-item {}
-
 .single-event-img {
   position: relative;
 }
@@ -4842,9 +4721,21 @@ div#filters {
   text-align: justify;
 }
 
-.single-event-content {}
+.single-event-content ol,
+.single-event-content ul {
+  list-style-position: outside !important;
+  list-style-type: decimal !important;
+  padding-left: 2rem !important;
+}
 
-.single-event-content {}
+.single-event-content ul {
+  list-style-type: disc !important;
+}
+
+.single-event-content li {
+  display: list-item !important;
+  margin-bottom: 0.5rem;
+}
 
 .single-date-map {
   overflow: hidden;
@@ -4878,8 +4769,6 @@ div#filters {
 .single-date-map .h-adress-content {
   display: table;
 }
-
-.single-date-map .h-adress-content {}
 
 .single-date-map .h-adress-content h6 {
   font-size: 16px;
@@ -6884,4 +6773,186 @@ div#filters {
 
 .box-style {
   display: none;
+}
+
+.tinymce-content ol {
+  list-style-type: decimal !important;
+  padding-left: 2rem !important;
+  margin-left: 0 !important;
+}
+
+.tinymce-content ul {
+  list-style-type: disc !important;
+  padding-left: 2rem !important;
+  margin-left: 0 !important;
+}
+
+.tinymce-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Step Section */
+.step-section .container {
+  padding: 30px 0 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Kiri: Judul dan tombol */
+.left-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.left-section h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Tetap gunakan .primary dan .secondary untuk warna */
+.primary {
+  background: linear-gradient(to right, #00B9AD, #00998F);
+  color: #fff;
+}
+
+.primary:hover {
+  background: linear-gradient(to right, #00998F, #00B9AD);
+}
+
+.secondary {
+  background-color: #e0f7f6;
+  border: 1px solid #00B9AD;
+  color: #00B9AD;
+}
+
+.secondary:hover {
+  background-color: #c2eeec;
+}
+
+/* Kanan: Card langkah-langkah */
+.steps {
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step-box {
+  background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  background-color: #00B9AD;
+  position: relative;
+  background-color: #00B9AD;
+  /* Warna baru */
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 250px;
+  min-height: 200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  transition: transform 0.2s;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+}
+
+.step-box .icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.step-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.step-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 60px;
+  font-weight: bold;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Wrapper flex container */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Responsive: Stack di handphone */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .steps {
+    width: 100%;
+  }
+
+  .step-box {
+    width: 100%;
+  }
+
+  .left-section h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .left-section p {
+    text-align: center;
+  }
+
+  .buttons {
+    align-items: center;
+  }
 }
